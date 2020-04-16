@@ -4,6 +4,6 @@ This code compares usage of logistic regression and LightGBM classifier to deter
 
 To reduce data imbalance, I choose a sample from data so that fraud/non-fraud transactions are in even proportion.
 
-Using logistic regression and LightGBM models with cross-validation (5 folds) lead to the highest F1 score around **97,7%** on the randomly extracted test set. Perhaps further preprocessing (avoiding information loss from undersampling) could improve that score a bit.
+Using logistic regression and LightGBM models with cross-validation (5 folds) leads to the highest F1 score around **97,7%** on the randomly extracted test set. Perhaps further preprocessing (avoiding information loss from undersampling) or even more parameter tuning could improve that score a bit.
 
 Kaggle kernel: https://www.kaggle.com/mtszkw/lightgbm-vs-logistic-regression-f1-97-7
