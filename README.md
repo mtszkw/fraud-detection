@@ -1,9 +1,11 @@
 # Credit Card Fraud Detection
 
-This code compares usage of logistic regression and LightGBM classifier to determine whether a transaction is a [credit card fraud](https://en.wikipedia.org/wiki/Credit_card_fraud). Whole dataset is available on Kaggle ([here](https://www.kaggle.com/mlg-ulb/creditcardfraud)) and contains transactions that occurred in two days, where we have 492 frauds out of 284,807 transactions. The dataset is highly unbalanced, the positive class (frauds) account for 0.172% of all transactions.
+This code compares usage of sklearn's `LogisticRegression` and `LightGBM` classifiers to determine whether a transaction is a [credit card fraud](https://en.wikipedia.org/wiki/Credit_card_fraud). Full dataset is [available on Kaggle](https://www.kaggle.com/mlg-ulb/creditcardfraud) and contains a lists of transactions that occurred in two days. The dataset is highly unbalanced as it contains 492 frauds (0.172%) out of 284,807 transactions.
 
-To reduce data imbalance, I choose a sample from data so that fraud/non-fraud transactions are in even proportion.
+## Balancing data
+This notebook is just a quick draft, so to reduce imbalance a sample from data is selected so that fraud/non-fraud transactions are in even proportion. Most likely, using more sophisticated imbalance reduction technique would improve the final score.
 
-Using logistic regression and LightGBM models with cross-validation (5 folds) leads to the highest F1 score around **97,7%** on the randomly extracted test set. Perhaps further preprocessing (avoiding information loss from undersampling) or even more parameter tuning could improve that score a bit.
+## Score
+Using Logistic Regression and LightGBM models with cross-validation (5 folds) leads to the highest F1 score around **97,7%** on the randomly extracted test set (20% of data). There is still a lot to improve: tesitng other models, more exhaustive hyperparameter tuning and proper class balancing might all improve accuracy of classification.
 
 Kaggle kernel: https://www.kaggle.com/mtszkw/lightgbm-vs-logistic-regression-f1-97-7
